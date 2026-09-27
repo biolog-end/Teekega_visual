@@ -1,0 +1,167 @@
+/* === T9 / Markov Chain Generator === */
+.markov-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1.5rem;
+    overflow-y: auto;
+    background: var(--bg-primary);
+}
+
+.markov-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.markov-header h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+    color: var(--text-primary);
+}
+
+.markov-header p {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+}
+
+/* User selector */
+.markov-user-select {
+    display: flex;
+    gap: 0.6rem;
+    margin-bottom: 1.5rem;
+}
+
+.markov-user-btn {
+    padding: 0.5rem 1.2rem;
+    border: 2px solid var(--border);
+    background: var(--bg-card);
+    color: var(--text-secondary);
+    border-radius: var(--radius);
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.markov-user-btn:hover {
+    border-color: var(--accent);
+    color: var(--text-primary);
+}
+
+.markov-user-btn.active {
+    border-color: var(--accent);
+    background: var(--accent-dim);
+    color: var(--accent-light);
+}
+
+/* Seed input */
+.markov-seed {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    max-width: 500px;
+}
+
+.markov-seed input {
+    flex: 1;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    color: var(--text-primary);
+    padding: 0.6rem 1rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.9rem;
+    font-family: inherit;
+}
+
+.markov-seed input:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+/* Generated phrase display */
+.markov-phrase {
+    width: 100%;
+    max-width: 600px;
+    min-height: 80px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.2rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text-primary);
+    text-align: center;
+    word-wrap: break-word;
+}
+
+.markov-phrase .seed-word {
+    color: var(--accent-light);
+    font-weight: 600;
+}
+
+.markov-phrase .gen-word {
+    color: var(--text-primary);
+}
+
+/* Word choice buttons */
+.markov-choices {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    max-width: 600px;
+    margin-bottom: 1rem;
+}
+
+.markov-choice-btn {
+    padding: 0.5rem 1rem;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-light);
+    color: var(--text-primary);
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.88rem;
+    font-weight: 500;
+    transition: all 0.15s;
+    position: relative;
+}
+
+.markov-choice-btn:hover {
+    border-color: var(--accent);
+    background: var(--accent-dim);
+    transform: scale(1.05);
+}
+
+.markov-choice-btn .choice-freq {
+    font-size: 0.6rem;
+    color: var(--text-muted);
+    margin-left: 4px;
+    opacity: 0.7;
+}
+
+/* Actions */
+.markov-actions {
+    display: flex;
+    gap: 0.6rem;
+    margin-top: 0.5rem;
+}
+
+.markov-action-btn {
+    padding: 0.4rem 1rem;
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    font-size: 0.78rem;
+    transition: all 0.2s;
+}
+
+.markov-action-btn:hover {
+    border-color: var(--accent);
+    color: var(--text-primary);
+}
