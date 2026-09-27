@@ -1,4 +1,4 @@
-# Telegram Chat Visualizer
+# Teekega visual
 
 **English** · [Русский](README.ru.md)
 
